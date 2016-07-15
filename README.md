@@ -4,9 +4,7 @@ I started TDD in GoLang using Exercism.io today: For more detailed info about th
 # How to start
 1. It took some time to set up the CLI and run test code, I followed the instruction from here: http://exercism.io/how-it-works/newbie
 2. Then I used this command to choose Golang : `exercism fetch go`
-3. Then I fetched first exercise :
-
-`exercism fetch helloworld`
+3. Then I fetched first exercise : `exercism fetch helloworld`
 4. Which is saved in "configured exercises directory".
 5. Later on I used this command to change my directory to keep the codes in my GoLang workspace and github: `exercism configure --dir=~C:\...``
 
