@@ -1,18 +1,14 @@
 # Exercism-GoLang
-I started TDD in GoLang using Exercism.io today: For more detailed info about the Go track see the [help
-page](http://exercism.io/languages/go).
+I started TDD in GoLang using Exercism.io today: For more detailed info about the Go track see the [Exercism.io Go Lang](http://exercism.io/languages/go).
 
-It took some time to set up the CLI and run test code, I followed the instruction from here: http://exercism.io/how-it-works/newbie
-
-Then I used this command to choose Golang : `exercism fetch go`
-
-Then I fetched first exercise :
+# How to start
+1. It took some time to set up the CLI and run test code, I followed the instruction from here: http://exercism.io/how-it-works/newbie
+2. Then I used this command to choose Golang : `exercism fetch go`
+3. Then I fetched first exercise :
 
 `exercism fetch helloworld`
-
-Which is saved in "configured exercises directory".
-
-Later on I used this command to change my directory to keep the codes in my GoLang workspace and github: `exercism configure --dir=~C:\...``
+4. Which is saved in "configured exercises directory".
+5. Later on I used this command to change my directory to keep the codes in my GoLang workspace and github: `exercism configure --dir=~C:\...``
 
 ## Test-Driven Development (TDD)
 
