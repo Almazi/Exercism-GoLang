@@ -1,12 +1,12 @@
-// Leap stub file
-
-// The package name is expected by the test program.
 package leap
 
-// testVersion should match the targetTestVersion in the test file.
 const testVersion = 2
 
-// It's good style to write a comment here documenting IsLeapYear.
-func IsLeapYear(int) bool {
-	// Write some code here to pass the test suite.
+// IsLeapYear is finding leap year from input integer by following the
+// condition: it is a leap year if it is divisible by 4 and either divisible by 400 or not divisible by 100 //
+func IsLeapYear(year int) bool {
+	if year%4 == 0 && (year%100 != 0 || year%400 == 0) {
+		return true
+	}
+	return false
 }
