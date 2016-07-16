@@ -1,26 +1,38 @@
-// Clock stub file
-
-// To use the right term, this is the package *clause*.
-// You can document general stuff about the package here if you like.
 package clock
 
-// The value of testVersion here must match `targetTestVersion` in the file
-// clock_test.go.
+import "fmt"
+
 const testVersion = 3
 
-// Clock API as stub definitions.  No, it doesn't compile yet.
-// More details and hints are in clock_test.go.
+//Clock is a constructor of int type
+type Clock int
 
-type Clock // Complete the type definition.  Pick a suitable data type.
-
+//New is a function that returns Clock - int type data. I can return only one
+// value so here I calculated the given hour and minute into minute which I
+// used later on to show time and add minute.
 func New(hour, minute int) Clock {
+	//minute can take more than 60 so have to work on it
+	time := hour*60 + minute
+	if time > 1439 {
+		time = time % 1440
+		return Clock(time)
+	} else if time < 0 {
+		time = time%1440 + 60*24
+		return Clock(time)
+	} else {
+		return Clock(time)
+	}
+
 }
 
-func (Clock) String() string {
+func (clk Clock) String() string {
+
+	//return fmt.Sprintf("%.2d:%.2d", clk / 60, clk % 60)
+	return fmt.Printf("%.2d:%.2d", clk/60, clk%60)
+
 }
 
-func (Clock) Add(minutes int) Clock {
-}
+func (clk Clock) Add(minutes int) Clock {
+	return New(0, int(clk)+minutes)
 
-// Remember to delete all of the stub comments.
-// They are just noise, and reviewers will complain.
+}
